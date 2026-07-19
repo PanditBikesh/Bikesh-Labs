@@ -10,7 +10,7 @@ export default function HeroBadge() {
         </span>
 
         <span className="sr-only">
-          Available for work
+          Available for opportunities
         </span>
 
         <span className="text-sm font-medium">

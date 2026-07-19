@@ -20,7 +20,6 @@ export default function Hero() {
         <div className="grid items-center justify-between gap-16 lg:grid-cols-2">
           <FadeIn>
             <div>
-
               <HeroBadge />
 
               <h1
@@ -42,30 +41,26 @@ export default function Hero() {
               </h1>
 
               <p className="mt-6 max-w-2xl text-xl font-medium leading-8 text-[var(--muted)]">
-                AI Engineer • Machine Learning Developer • Software Developer
+                AI & Machine Learning Engineer
               </p>
 
               <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--muted)]">
-                Passionate about building intelligent software, AI-powered applications,
-                and modern web solutions using Machine Learning, Python, React, and
-                TypeScript.
+                I build intelligent systems and practical software using
+                machine learning, data, and modern engineering.
               </p>
 
               <HeroButtons />
 
               <HeroStats />
-
             </div>
           </FadeIn>
 
           <FadeIn delay={0.2}>
             <HeroImage />
           </FadeIn>
-
         </div>
 
         <HeroScroll />
-
       </Container>
     </Section>
   );
