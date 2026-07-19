@@ -45,8 +45,8 @@ export default function Hero() {
               </p>
 
               <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--muted)]">
-                I build intelligent systems and practical software using
-                machine learning, data, and modern engineering.
+                I turn data and ideas into intelligent applications—
+                from predictive machine learning systems to AI-powered software.
               </p>
 
               <HeroButtons />
