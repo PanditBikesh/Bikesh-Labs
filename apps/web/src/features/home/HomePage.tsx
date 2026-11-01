@@ -15,8 +15,8 @@ export default function HomePage() {
   return (
     <>
       <SEO
-        title="Home"
-        description="Portfolio of Bikesh Pandit showcasing Artificial Intelligence, Machine Learning, and Software Development projects."
+        title="AI/ML Engineer & Developer"
+        description="Explore the portfolio of Bikesh Kumar Pandit, also known as Bikesh Pandit. Discover projects in artificial intelligence, machine learning, Python, and software development."
       />
 
       <Hero />

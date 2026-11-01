@@ -1,24 +1,26 @@
+
 const defaultSeo = {
-  title: "Bikesh Pandit",
+  title: "Bikesh Kumar Pandit | AI/ML Engineer & Developer",
 
   description:
-    "Portfolio of Bikesh Pandit - AI Engineer, Machine Learning Developer, Full Stack Developer, and Software Engineer.",
+    "Official portfolio of Bikesh Kumar Pandit, also known as Bikesh Pandit. Explore artificial intelligence, machine learning, software development, and engineering projects.",
 
   keywords: [
+    "Bikesh Kumar Pandit",
     "Bikesh Pandit",
-    "Portfolio",
-    "AI",
+    "Bikesh Kumar",
+    "AI/ML Engineer",
+    "Artificial Intelligence",
     "Machine Learning",
-    "React",
+    "Software Developer",
     "Python",
+    "React",
     "TypeScript",
-    "Software Engineer",
-    "Full Stack Developer",
   ],
 
-  author: "Bikesh Pandit",
+  author: "Bikesh Kumar Pandit",
 
-  url: "https://your-domain.vercel.app",
+  url: "https://bikeshpandit.com.np",
 
   image: "/og-image.png",
 };

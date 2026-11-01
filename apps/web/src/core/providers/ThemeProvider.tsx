@@ -1,3 +1,4 @@
+
 import {
   useEffect,
   useMemo,
@@ -13,29 +14,37 @@ type Props = {
 
 const STORAGE_KEY = "portfolio-theme";
 
-export default function ThemeProvider({ children }: Props) {
-  const [theme, setTheme] = useState<Theme>("dark");
+function getInitialTheme(): Theme {
+  if (typeof window === "undefined") {
+    return "dark";
+  }
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem(STORAGE_KEY) as Theme | null;
+  try {
+    const savedTheme = localStorage.getItem(STORAGE_KEY);
 
-    if (savedTheme) {
-      setTheme(savedTheme);
-      return;
+    if (savedTheme === "dark" || savedTheme === "light") {
+      return savedTheme;
     }
+  } catch {
+    // Use the default theme if localStorage is unavailable.
+  }
 
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
+  // Dark mode is the default for new visitors.
+  return "dark";
+}
 
-    setTheme(prefersDark ? "dark" : "light");
-  }, []);
+export default function ThemeProvider({ children }: Props) {
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
   useEffect(() => {
     document.documentElement.classList.remove("light", "dark");
     document.documentElement.classList.add(theme);
 
-    localStorage.setItem(STORAGE_KEY, theme);
+    try {
+      localStorage.setItem(STORAGE_KEY, theme);
+    } catch {
+      // Theme still works for the current session.
+    }
   }, [theme]);
 
   const value = useMemo(

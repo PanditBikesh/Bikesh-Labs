@@ -1,3 +1,4 @@
+
 import { FadeIn } from "@/shared/animations";
 import {
   Container,
@@ -22,6 +23,7 @@ export default function Hero() {
             <div>
               <HeroBadge />
 
+              {/* Main identity heading */}
               <h1
                 className="
                   mt-6
@@ -34,19 +36,22 @@ export default function Hero() {
                   xl:text-7xl
                 "
               >
-                Bikesh
+                Bikesh Kumar
                 <span className="text-[var(--primary)]">
                   {" "}Pandit
                 </span>
               </h1>
 
+              {/* Professional role */}
               <p className="mt-6 max-w-2xl text-xl font-medium leading-8 text-[var(--muted)]">
                 AI & Machine Learning Engineer
               </p>
 
+              {/* Personal introduction */}
               <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--muted)]">
-                I turn data and ideas into intelligent applications—
-                from predictive machine learning systems to AI-powered software.
+                I'm Bikesh Pandit, a developer focused on building
+                intelligent applications using artificial intelligence,
+                machine learning, and modern software technologies.
               </p>
 
               <HeroButtons />
